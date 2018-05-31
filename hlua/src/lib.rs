@@ -105,6 +105,8 @@
 //! - TODO: userdata
 //!
 
+#![feature(rust_2018_preview)]
+
 // Export the version of lua52_sys in use by this crate. This allows clients to perform low-level
 // Lua operations without worrying about semver.
 #[doc(hidden)]
