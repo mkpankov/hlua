@@ -1,11 +1,11 @@
-use AsMutLua;
-use AsLua;
+use crate::AsMutLua;
+use crate::AsLua;
 
-use Push;
-use PushOne;
-use PushGuard;
-use LuaRead;
-use Void;
+use crate::Push;
+use crate::PushOne;
+use crate::PushGuard;
+use crate::LuaRead;
+use crate::Void;
 
 macro_rules! tuple_impl {
     ($ty:ident) => (

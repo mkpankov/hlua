@@ -9,16 +9,16 @@ use std::io::Error as IoError;
 use std::mem;
 use std::ptr;
 
-use AsLua;
-use AsMutLua;
+use crate::AsLua;
+use crate::AsMutLua;
 
-use LuaContext;
-use LuaRead;
-use LuaError;
-use Push;
-use PushGuard;
-use PushOne;
-use Void;
+use crate::LuaContext;
+use crate::LuaRead;
+use crate::LuaError;
+use crate::Push;
+use crate::PushGuard;
+use crate::PushOne;
+use crate::Void;
 
 /// Wrapper around a `&str`. When pushed, the content will be parsed as Lua code and turned into a
 /// function.

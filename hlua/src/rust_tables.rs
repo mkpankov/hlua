@@ -1,12 +1,12 @@
 use ffi;
-use any::{AnyLuaValue, AnyHashableLuaValue};
+use crate::any::{AnyLuaValue, AnyHashableLuaValue};
 
-use Push;
-use PushGuard;
-use PushOne;
-use AsMutLua;
-use TuplePushError;
-use LuaRead;
+use crate::Push;
+use crate::PushGuard;
+use crate::PushOne;
+use crate::AsMutLua;
+use crate::TuplePushError;
+use crate::LuaRead;
 
 use std::collections::{BTreeMap, HashMap, HashSet};
 use std::hash::Hash;

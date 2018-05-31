@@ -6,15 +6,15 @@ use std::ops::Deref;
 use ffi;
 use libc;
 
-use AnyLuaValue;
-use AnyLuaString;
-use AsLua;
-use AsMutLua;
-use LuaRead;
-use Push;
-use PushGuard;
-use PushOne;
-use Void;
+use crate::AnyLuaValue;
+use crate::AnyLuaString;
+use crate::AsLua;
+use crate::AsMutLua;
+use crate::LuaRead;
+use crate::Push;
+use crate::PushGuard;
+use crate::PushOne;
+use crate::Void;
 
 macro_rules! integer_impl(
     ($t:ident) => (

@@ -123,19 +123,19 @@ use std::fmt;
 use std::convert::From;
 use std::io;
 
-pub use any::{AnyHashableLuaValue, AnyLuaString, AnyLuaValue};
-pub use functions_write::{Function, InsideCallback};
-pub use functions_write::{function0, function1, function2, function3, function4, function5};
-pub use functions_write::{function6, function7, function8, function9, function10};
-pub use lua_functions::LuaFunction;
-pub use lua_functions::LuaFunctionCallError;
-pub use lua_functions::{LuaCode, LuaCodeFromReader};
-pub use lua_tables::LuaTable;
-pub use lua_tables::LuaTableIterator;
-pub use tuples::TuplePushError;
-pub use userdata::UserdataOnStack;
-pub use userdata::{push_userdata, read_userdata};
-pub use values::StringInLua;
+pub use crate::any::{AnyHashableLuaValue, AnyLuaString, AnyLuaValue};
+pub use crate::functions_write::{Function, InsideCallback};
+pub use crate::functions_write::{function0, function1, function2, function3, function4, function5};
+pub use crate::functions_write::{function6, function7, function8, function9, function10};
+pub use crate::lua_functions::LuaFunction;
+pub use crate::lua_functions::LuaFunctionCallError;
+pub use crate::lua_functions::{LuaCode, LuaCodeFromReader};
+pub use crate::lua_tables::LuaTable;
+pub use crate::lua_tables::LuaTableIterator;
+pub use crate::tuples::TuplePushError;
+pub use crate::userdata::UserdataOnStack;
+pub use crate::userdata::{push_userdata, read_userdata};
+pub use crate::values::StringInLua;
 
 mod any;
 mod functions_write;
@@ -423,7 +423,7 @@ pub enum LuaError {
 
 impl fmt::Display for LuaError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        use LuaError::*;
+        use crate::LuaError::*;
 
         match *self {
             SyntaxError(ref s) => write!(f, "Syntax error: {}", s),
@@ -436,7 +436,7 @@ impl fmt::Display for LuaError {
 
 impl Error for LuaError {
     fn description(&self) -> &str {
-        use LuaError::*;
+        use crate::LuaError::*;
 
         match *self {
             SyntaxError(ref s) => &s,
@@ -447,7 +447,7 @@ impl Error for LuaError {
     }
 
     fn cause(&self) -> Option<&Error> {
-        use LuaError::*;
+        use crate::LuaError::*;
 
         match *self {
             SyntaxError(_) => None,

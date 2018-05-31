@@ -1,15 +1,15 @@
 use std::marker::PhantomData;
 
 use ffi;
-use LuaContext;
+use crate::LuaContext;
 
-use AsLua;
-use AsMutLua;
-use Push;
-use PushGuard;
-use PushOne;
-use LuaRead;
-use Void;
+use crate::AsLua;
+use crate::AsMutLua;
+use crate::Push;
+use crate::PushGuard;
+use crate::PushOne;
+use crate::LuaRead;
+use crate::Void;
 
 /// Represents a table stored in the Lua context.
 ///
